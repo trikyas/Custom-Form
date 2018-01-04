@@ -11,19 +11,27 @@ body {
   margin: 0;
   padding: 0;
 }
-.trikyas {
-
-}
 .github {
   position: fixed;
   top: 0;
   right: 0;
   background-image: url('images/github.png');
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   width: 150px;
-  height: 150px;
-  filter: drop-shadow(0 0 2px #444);
+  height: 160px;
+  filter: drop-shadow(0 0 2.5px #444);
+  transition: background .5s ease;
+}
+.github:hover {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: url('images/github.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 160px;
 }
 /* Logo */
 #logo {
