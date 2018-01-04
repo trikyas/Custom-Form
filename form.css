@@ -1,0 +1,232 @@
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+html {
+  height: 100%;
+}
+body {
+  background-color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+/* Logo */
+#logo {
+  top: -5px;
+  margin: 0 auto;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 115px;
+  height: 115px;
+  background-image: url('images/logo-idea.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: drop-shadow(0 0 2px transparent);
+}
+#logo:hover {
+  animation: tr .08959s linear infinite;
+  filter: drop-shadow(0 0 2px #444);
+}
+@keyframes tr {
+  50% {
+    transform: rotateY(720deg);
+  }
+}
+#logoS-S {
+  display: none;
+}
+/* grouped for house-keeping | Trikyas */
+form#signup h3, form#signup h4, form#signup input[type=submit] {
+color: #ffffff;
+}
+/* Form */
+form {
+  margin: 70px auto;
+}
+form#signup {
+  max-width: 600px;
+  padding: 15px;
+  background-blend-mode: multiply;
+  background: linear-gradient(to bottom right, #002f4b, #dc4225), url('images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+form#signup:before {
+  content: '';
+	position: absolute;
+  z-index: -1;
+  height: 110vh;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(to bottom right,#002f4b,#dc4225);
+	opacity: .6;
+  }
+form#signup legend, form#signup textarea {
+  color: #254581;
+}
+form#signup h2 {
+  margin: 0;
+  font-size: 2em;
+  color: #ffd34c;
+}
+form#signup h3 {
+  margin: -5px 0 12px 0;
+  font-size: 1.2em;
+}
+form#signup h4 {
+  margin: 15px 0 3px 0;
+  font-size: 1em;
+}
+form#signup p, form#signup label {
+  margin: 0 0 6px 0;
+  color: rgba(255,255,255,0.80);
+}
+
+/* Fieldset and Legend */
+
+form#signup fieldset {
+  border: 1px solid rgba(255,255,255,0.40);
+  margin: 15px 0;
+  padding: 0 10px 10px 20px
+}
+form#signup legend {
+  font-size: .9em;
+}
+/* Text areas */
+
+form#signup textarea {
+  font-size: .9em;
+  padding: 5px;
+  border: none;
+  background-color: rgba(255,255,255,0.80);
+  width: 87.5%;
+  transition: background-color .5s ease-in-out;
+}
+form#signup textarea:focus {
+  background-color: #ffffff;
+  outline: 5px solid #ffd34c;
+}
+form#signup select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+       -o-appearance: none;
+          appearance: none;
+  font-size: .9em;
+  background: #588fd0 url(images/icons_arrows.svg) no-repeat right 8px;
+  background-size: 30px 30px;
+  color: #ffd34c;
+  padding: 7px 45px 7px 20px;
+  border: 1px solid #ffd34c;
+  line-height: 2em;
+
+}
+form#signup select:focus {
+  outline: none;
+}
+/* for IE because it SUCKS!!! */
+form#signup select::-ms-expand {
+  display: none;
+}
+
+/* Checkbox and Radio inputs */
+/* ## Remove Default styling */
+form#signup input[type=checkbox], form#signup input[type=radio] {
+  width: 20px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+/* Custom Styling */
+form#signup input[type=checkbox] + label,
+form#signup input[type=radio] + label {
+  display: inline-block;
+  margin-left: -20px;
+  padding: 4px 0 0 27px;
+  background: url(images/icons_check_radio.svg) no-repeat;
+  background-size: 20px 80px;
+  line-height: 16px;
+}
+form#signup input[type=checkbox] + label {
+  background-position: 0 0;
+}
+form#signup input[type=radio] + label {
+  background-position: 0 -40px;
+}
+form#signup input:checked + label {
+  color: #ffd34c;
+}
+form#signup input[type=checkbox]:checked + label {
+  background-position: 0 -20px;
+}
+form#signup input[type=radio]:checked + label {
+  background-position: 0 -60px;
+}
+form#signup #frequency {
+  background-color: #264581;
+}
+
+form#signup input#email {
+  font-size: .9em;
+  background: rgba(255,255,255,0.80) url(images/icon_email.svg) no-repeat 7px 6px;
+  background-size: 30px 17px;
+  padding: 5px 0 6px 47px;
+  margin: 0 0 12px 0;
+  border: none;
+  color: #264581;
+  width: 80%;
+  transition: background .5s ease-in;
+}
+form#signup input#email:focus {
+  background: #ffffff;
+  outline: 5px solid #ffd34c;
+}
+/* Submit button */
+form#signup input[type=submit] {
+  font-size: .9em;
+  border: 1px solid transparent;
+  background-color: #264581;
+  margin: 10px 0 5px 0;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* iOS ONLY!!! */
+  -webkit-appearance: none;
+  transition: color .5s ease-in-out;
+}
+form#signup input[type=submit]:hover {
+  color: #ffd34c;
+  border: 1px solid #ffd34c;
+}
+
+/* Fix the width issue on smaller screens + Remove SVG and Replaced with Text */
+
+@media screen and (max-width: 768px) {
+  #logo {
+    display: none;
+  }
+  #logoS-S {
+    display: block;
+    font-size: 5em;
+    margin-bottom: -50px;
+    text-align: center;
+    text-decoration: underline;
+    color: #ffffff;
+    filter: drop-shadow(0 0 2px #444);
+  }
+  form#signup textarea {
+    font-size: .9em;
+    padding: 5px;
+    border: none;
+    background-color: rgba(255,255,255,0.80);
+    width: 90%;
+    transition: background-color .5s ease-in-out;
+  }
+}
+/* Created By Trikyas */
