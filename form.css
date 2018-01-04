@@ -11,6 +11,20 @@ body {
   margin: 0;
   padding: 0;
 }
+.trikyas {
+
+}
+.github {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-image: url('images/github.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  filter: drop-shadow(0 0 2px #444);
+}
 /* Logo */
 #logo {
   top: -5px;
@@ -219,6 +233,16 @@ form#signup input[type=submit]:hover {
     text-decoration: underline;
     color: #ffffff;
     filter: drop-shadow(0 0 2px #444);
+  }
+  .github {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('images/github.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px;
   }
   form#signup textarea {
     font-size: .9em;
